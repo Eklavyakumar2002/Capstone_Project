@@ -38,12 +38,33 @@ pipeline {
                 }
             }
         }
+
+        stage('Verify Report') {
+            steps {
+                dir('GUI Elements Automation Framework') {
+                    bat 'dir /s'
+                }
+            }
+        }
     }
 
     post {
 
         always {
-            archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+
+            // Archive JAR
+            archiveArtifacts artifacts: '**/target/*.jar',
+                             allowEmptyArchive: true
+
+            // Publish Extent Report
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'GUI Elements Automation Framework/test-output',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report'
+            ])
         }
 
         success {
