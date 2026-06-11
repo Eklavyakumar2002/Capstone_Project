@@ -17,19 +17,25 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                dir('GUI Elements Automation Framework') {
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                dir('GUI Elements Automation Framework') {
+                    bat 'mvn test'
+                }
             }
         }
 
         stage('Package') {
             steps {
-                bat 'mvn package'
+                dir('GUI Elements Automation Framework') {
+                    bat 'mvn package'
+                }
             }
         }
     }
