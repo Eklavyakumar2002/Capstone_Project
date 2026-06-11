@@ -14,3 +14,5 @@ Drag & Drop Automation
 Dynamic Web Tables
 File Upload & Download
 Utility-Based Reusable Framework
+# Extent Report
+<img width="1172" height="976" alt="image" src="https://github.com/user-attachments/assets/c9865e52-abbb-4476-9b90-a4803ef5ab8c" />
