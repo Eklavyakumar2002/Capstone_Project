@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="GUI Automation Suite">
+
+    <test name="Form Tests">
+        <classes>
+            <class name="testcases.FormTest"/>
+        </classes>
+    </test>
+
+    <test name="Alert Tests">
+        <classes>
+            <class name="testcases.AlertTest"/>
+        </classes>
+    </test>
+
+    <test name="Mouse Action Tests">
+        <classes>
+            <class name="testcases.MouseActionTest"/>
+        </classes>
+    </test>
+
+    <test name="Slider Tests">
+        <classes>
+            <class name="testcases.SliderTest"/>
+        </classes>
+    </test>
+
+    <test name="Upload Tests">
+        <classes>
+            <class name="testcases.UploadPageTest"/>
+        </classes>
+    </test>
+    <listeners>
+    <listener class-name="listeners.TestListener"/>
+</listeners>
+
+</suite>
