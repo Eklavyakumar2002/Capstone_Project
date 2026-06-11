@@ -6,7 +6,6 @@ pipeline {
         jdk 'JDK-21'
         maven 'MAVEN3'
     }
-
     stages {
 
         stage('Checkout') {
@@ -14,7 +13,6 @@ pipeline {
                 checkout scm
             }
         }
-
         stage('Build') {
             steps {
                 dir('GUI Elements Automation Framework') {
@@ -22,7 +20,6 @@ pipeline {
                 }
             }
         }
-
         stage('Test') {
             steps {
                 dir('GUI Elements Automation Framework') {
